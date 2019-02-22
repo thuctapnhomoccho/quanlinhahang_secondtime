@@ -1,0 +1,10 @@
+C:\Users\Hieu\source\repos\thuctapnhom_quanlinhahang\thuctapnhom_quanlinhahang\obj\Debug\thuctapnhom_quanlinhahang.csprojAssemblyReference.cache
+C:\Users\Hieu\source\repos\thuctapnhom_quanlinhahang\thuctapnhom_quanlinhahang\obj\Debug\thuctapnhom_quanlinhahang.Form1.resources
+C:\Users\Hieu\source\repos\thuctapnhom_quanlinhahang\thuctapnhom_quanlinhahang\obj\Debug\thuctapnhom_quanlinhahang.Properties.Resources.resources
+C:\Users\Hieu\source\repos\thuctapnhom_quanlinhahang\thuctapnhom_quanlinhahang\obj\Debug\thuctapnhom_quanlinhahang.csproj.GenerateResource.cache
+C:\Users\Hieu\source\repos\thuctapnhom_quanlinhahang\thuctapnhom_quanlinhahang\obj\Debug\thuctapnhom_quanlinhahang.csproj.CoreCompileInputs.cache
+C:\Users\Hieu\source\repos\thuctapnhom_quanlinhahang\thuctapnhom_quanlinhahang\bin\Debug\thuctapnhom_quanlinhahang.exe.config
+C:\Users\Hieu\source\repos\thuctapnhom_quanlinhahang\thuctapnhom_quanlinhahang\bin\Debug\thuctapnhom_quanlinhahang.exe
+C:\Users\Hieu\source\repos\thuctapnhom_quanlinhahang\thuctapnhom_quanlinhahang\bin\Debug\thuctapnhom_quanlinhahang.pdb
+C:\Users\Hieu\source\repos\thuctapnhom_quanlinhahang\thuctapnhom_quanlinhahang\obj\Debug\thuctapnhom_quanlinhahang.exe
+C:\Users\Hieu\source\repos\thuctapnhom_quanlinhahang\thuctapnhom_quanlinhahang\obj\Debug\thuctapnhom_quanlinhahang.pdb
