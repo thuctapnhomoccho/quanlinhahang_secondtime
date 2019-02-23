@@ -11,6 +11,9 @@ namespace thuctapnhom_quanlinhahang.Object
 {
     class Account
     {
+        public int id_account;
+        public string username;
+        public string pass;
         connects cn = new connects();
         public DataTable show_account()
         {
