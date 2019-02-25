@@ -28,11 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tabs_quanlynhahang = new System.Windows.Forms.TabControl();
             this.tab_nhanvien = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_huy_nhanvien = new System.Windows.Forms.Button();
+            this.datetm_ngaysinh_nhanvien = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.txt_matkhau = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -67,21 +71,57 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.tooltrp_textsearch_nhanvien = new System.Windows.Forms.ToolStripTextBox();
             this.tooltrp_search_nhanvien = new System.Windows.Forms.ToolStripButton();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.datetm_ngaysinh_nhanvien = new System.Windows.Forms.DateTimePicker();
+            this.tab_banan = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.cb_sokhach_ban = new System.Windows.Forms.ComboBox();
+            this.btn_huy_banan = new System.Windows.Forms.Button();
+            this.btn_chucnang_ban = new System.Windows.Forms.Button();
+            this.rb_empty_ban = new System.Windows.Forms.RadioButton();
+            this.rb_active_ban = new System.Windows.Forms.RadioButton();
+            this.txt_chatlieuban = new System.Windows.Forms.TextBox();
+            this.txt_id_banan = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.lb_idban = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.data_banan = new System.Windows.Forms.DataGridView();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.toooltrp_reset_ban = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.tooltrp_insert_ban = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.tooltrp_update_ban = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.tooltrp_delete_ban = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.tool_cb_filter_ban = new System.Windows.Forms.ToolStripComboBox();
+            this.tooltrp_search_banan = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
+            this.quanlinhahangDataSet1 = new thuctapnhom_quanlinhahang.quanlinhahangDataSet();
+            this.loaibananBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.loaibananTableAdapter1 = new thuctapnhom_quanlinhahang.quanlinhahangDataSetTableAdapters.LoaibananTableAdapter();
             this.tabs_quanlynhahang.SuspendLayout();
             this.tab_nhanvien.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datagrip_nhanvien)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            this.tab_banan.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.data_banan)).BeginInit();
+            this.toolStrip2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quanlinhahangDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loaibananBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabs_quanlynhahang
             // 
             this.tabs_quanlynhahang.Controls.Add(this.tab_nhanvien);
-            this.tabs_quanlynhahang.Controls.Add(this.tabPage2);
+            this.tabs_quanlynhahang.Controls.Add(this.tab_banan);
             this.tabs_quanlynhahang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabs_quanlynhahang.Location = new System.Drawing.Point(0, 0);
             this.tabs_quanlynhahang.Name = "tabs_quanlynhahang";
@@ -104,6 +144,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btn_huy_nhanvien);
             this.groupBox2.Controls.Add(this.datetm_ngaysinh_nhanvien);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.txt_matkhau);
@@ -125,17 +166,44 @@
             this.groupBox2.Controls.Add(this.txt_diachi);
             this.groupBox2.Controls.Add(this.txt_hoten);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox2.Location = new System.Drawing.Point(497, 31);
+            this.groupBox2.Location = new System.Drawing.Point(464, 31);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(255, 408);
+            this.groupBox2.Size = new System.Drawing.Size(288, 408);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
+            // 
+            // btn_huy_nhanvien
+            // 
+            this.btn_huy_nhanvien.Location = new System.Drawing.Point(226, 379);
+            this.btn_huy_nhanvien.Name = "btn_huy_nhanvien";
+            this.btn_huy_nhanvien.Size = new System.Drawing.Size(56, 23);
+            this.btn_huy_nhanvien.TabIndex = 22;
+            this.btn_huy_nhanvien.Text = "Hủy";
+            this.btn_huy_nhanvien.UseVisualStyleBackColor = true;
+            this.btn_huy_nhanvien.Click += new System.EventHandler(this.btn_huy_nhanvien_Click);
+            // 
+            // datetm_ngaysinh_nhanvien
+            // 
+            this.datetm_ngaysinh_nhanvien.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.datetm_ngaysinh_nhanvien.Location = new System.Drawing.Point(97, 88);
+            this.datetm_ngaysinh_nhanvien.Name = "datetm_ngaysinh_nhanvien";
+            this.datetm_ngaysinh_nhanvien.Size = new System.Drawing.Size(98, 20);
+            this.datetm_ngaysinh_nhanvien.TabIndex = 21;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 94);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(54, 13);
+            this.label4.TabIndex = 20;
+            this.label4.Text = "Ngày sinh";
             // 
             // txt_matkhau
             // 
             this.txt_matkhau.Location = new System.Drawing.Point(97, 341);
             this.txt_matkhau.Name = "txt_matkhau";
-            this.txt_matkhau.Size = new System.Drawing.Size(136, 20);
+            this.txt_matkhau.Size = new System.Drawing.Size(185, 20);
             this.txt_matkhau.TabIndex = 19;
             // 
             // label9
@@ -213,7 +281,7 @@
             // rb_nu
             // 
             this.rb_nu.AutoSize = true;
-            this.rb_nu.Location = new System.Drawing.Point(193, 57);
+            this.rb_nu.Location = new System.Drawing.Point(156, 59);
             this.rb_nu.Name = "rb_nu";
             this.rb_nu.Size = new System.Drawing.Size(39, 17);
             this.rb_nu.TabIndex = 9;
@@ -234,9 +302,9 @@
             // 
             // btn_chucnang_nhanvien
             // 
-            this.btn_chucnang_nhanvien.Location = new System.Drawing.Point(15, 379);
+            this.btn_chucnang_nhanvien.Location = new System.Drawing.Point(97, 379);
             this.btn_chucnang_nhanvien.Name = "btn_chucnang_nhanvien";
-            this.btn_chucnang_nhanvien.Size = new System.Drawing.Size(218, 23);
+            this.btn_chucnang_nhanvien.Size = new System.Drawing.Size(123, 23);
             this.btn_chucnang_nhanvien.TabIndex = 7;
             this.btn_chucnang_nhanvien.Text = "button1";
             this.btn_chucnang_nhanvien.UseVisualStyleBackColor = true;
@@ -246,42 +314,42 @@
             // 
             this.txt_tendangnhap.Location = new System.Drawing.Point(97, 298);
             this.txt_tendangnhap.Name = "txt_tendangnhap";
-            this.txt_tendangnhap.Size = new System.Drawing.Size(136, 20);
+            this.txt_tendangnhap.Size = new System.Drawing.Size(185, 20);
             this.txt_tendangnhap.TabIndex = 6;
             // 
             // txt_luong
             // 
             this.txt_luong.Location = new System.Drawing.Point(98, 259);
             this.txt_luong.Name = "txt_luong";
-            this.txt_luong.Size = new System.Drawing.Size(136, 20);
+            this.txt_luong.Size = new System.Drawing.Size(185, 20);
             this.txt_luong.TabIndex = 5;
             // 
             // txt_sdt
             // 
             this.txt_sdt.Location = new System.Drawing.Point(97, 175);
             this.txt_sdt.Name = "txt_sdt";
-            this.txt_sdt.Size = new System.Drawing.Size(136, 20);
+            this.txt_sdt.Size = new System.Drawing.Size(185, 20);
             this.txt_sdt.TabIndex = 4;
             // 
             // txt_chucvu
             // 
             this.txt_chucvu.Location = new System.Drawing.Point(97, 222);
             this.txt_chucvu.Name = "txt_chucvu";
-            this.txt_chucvu.Size = new System.Drawing.Size(137, 20);
+            this.txt_chucvu.Size = new System.Drawing.Size(186, 20);
             this.txt_chucvu.TabIndex = 3;
             // 
             // txt_diachi
             // 
             this.txt_diachi.Location = new System.Drawing.Point(98, 131);
             this.txt_diachi.Name = "txt_diachi";
-            this.txt_diachi.Size = new System.Drawing.Size(136, 20);
+            this.txt_diachi.Size = new System.Drawing.Size(185, 20);
             this.txt_diachi.TabIndex = 2;
             // 
             // txt_hoten
             // 
             this.txt_hoten.Location = new System.Drawing.Point(97, 19);
             this.txt_hoten.Name = "txt_hoten";
-            this.txt_hoten.Size = new System.Drawing.Size(136, 20);
+            this.txt_hoten.Size = new System.Drawing.Size(185, 20);
             this.txt_hoten.TabIndex = 0;
             // 
             // groupBox1
@@ -292,7 +360,7 @@
             this.groupBox1.Controls.Add(this.datagrip_nhanvien);
             this.groupBox1.Location = new System.Drawing.Point(0, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(494, 408);
+            this.groupBox1.Size = new System.Drawing.Size(458, 408);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
@@ -314,7 +382,7 @@
             this.datagrip_nhanvien.Location = new System.Drawing.Point(3, 16);
             this.datagrip_nhanvien.Name = "datagrip_nhanvien";
             this.datagrip_nhanvien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datagrip_nhanvien.Size = new System.Drawing.Size(488, 389);
+            this.datagrip_nhanvien.Size = new System.Drawing.Size(452, 389);
             this.datagrip_nhanvien.TabIndex = 0;
             this.datagrip_nhanvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrip_nhanvien_CellClick);
             this.datagrip_nhanvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datagrip_nhanvien_CellContentClick);
@@ -423,7 +491,7 @@
             // tooltrp_textsearch_nhanvien
             // 
             this.tooltrp_textsearch_nhanvien.Name = "tooltrp_textsearch_nhanvien";
-            this.tooltrp_textsearch_nhanvien.Size = new System.Drawing.Size(150, 28);
+            this.tooltrp_textsearch_nhanvien.Size = new System.Drawing.Size(160, 28);
             // 
             // tooltrp_search_nhanvien
             // 
@@ -435,32 +503,296 @@
             this.tooltrp_search_nhanvien.Text = "Search";
             this.tooltrp_search_nhanvien.Click += new System.EventHandler(this.tooltrp_search_nhanvien_Click);
             // 
-            // tabPage2
+            // tab_banan
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(755, 427);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tab_banan.Controls.Add(this.groupBox4);
+            this.tab_banan.Controls.Add(this.groupBox3);
+            this.tab_banan.Controls.Add(this.toolStrip2);
+            this.tab_banan.Location = new System.Drawing.Point(4, 22);
+            this.tab_banan.Name = "tab_banan";
+            this.tab_banan.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_banan.Size = new System.Drawing.Size(755, 442);
+            this.tab_banan.TabIndex = 1;
+            this.tab_banan.Text = "Bàn ăn ";
+            this.tab_banan.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // groupBox4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 94);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(54, 13);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "Ngày sinh";
+            this.groupBox4.Controls.Add(this.cb_sokhach_ban);
+            this.groupBox4.Controls.Add(this.btn_huy_banan);
+            this.groupBox4.Controls.Add(this.btn_chucnang_ban);
+            this.groupBox4.Controls.Add(this.rb_empty_ban);
+            this.groupBox4.Controls.Add(this.rb_active_ban);
+            this.groupBox4.Controls.Add(this.txt_chatlieuban);
+            this.groupBox4.Controls.Add(this.txt_id_banan);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.lb_idban);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox4.Location = new System.Drawing.Point(449, 31);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(303, 408);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
             // 
-            // datetm_ngaysinh_nhanvien
+            // cb_sokhach_ban
             // 
-            this.datetm_ngaysinh_nhanvien.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datetm_ngaysinh_nhanvien.Location = new System.Drawing.Point(97, 88);
-            this.datetm_ngaysinh_nhanvien.Name = "datetm_ngaysinh_nhanvien";
-            this.datetm_ngaysinh_nhanvien.Size = new System.Drawing.Size(136, 20);
-            this.datetm_ngaysinh_nhanvien.TabIndex = 21;
+            this.cb_sokhach_ban.DataSource = this.loaibananBindingSource;
+            this.cb_sokhach_ban.DisplayMember = "soluongkhach";
+            this.cb_sokhach_ban.FormattingEnabled = true;
+            this.cb_sokhach_ban.Location = new System.Drawing.Point(80, 318);
+            this.cb_sokhach_ban.Name = "cb_sokhach_ban";
+            this.cb_sokhach_ban.Size = new System.Drawing.Size(199, 21);
+            this.cb_sokhach_ban.TabIndex = 12;
+            this.cb_sokhach_ban.ValueMember = "id_loaiban";
+            // 
+            // btn_huy_banan
+            // 
+            this.btn_huy_banan.Location = new System.Drawing.Point(198, 373);
+            this.btn_huy_banan.Name = "btn_huy_banan";
+            this.btn_huy_banan.Size = new System.Drawing.Size(75, 23);
+            this.btn_huy_banan.TabIndex = 3;
+            this.btn_huy_banan.Text = "Hủy";
+            this.btn_huy_banan.UseVisualStyleBackColor = true;
+            this.btn_huy_banan.Click += new System.EventHandler(this.btn_huy_banan_Click);
+            // 
+            // btn_chucnang_ban
+            // 
+            this.btn_chucnang_ban.Location = new System.Drawing.Point(80, 373);
+            this.btn_chucnang_ban.Name = "btn_chucnang_ban";
+            this.btn_chucnang_ban.Size = new System.Drawing.Size(109, 23);
+            this.btn_chucnang_ban.TabIndex = 11;
+            this.btn_chucnang_ban.Text = "button1";
+            this.btn_chucnang_ban.UseVisualStyleBackColor = true;
+            this.btn_chucnang_ban.Click += new System.EventHandler(this.btn_chucnang_ban_Click);
+            // 
+            // rb_empty_ban
+            // 
+            this.rb_empty_ban.AutoSize = true;
+            this.rb_empty_ban.Location = new System.Drawing.Point(198, 229);
+            this.rb_empty_ban.Name = "rb_empty_ban";
+            this.rb_empty_ban.Size = new System.Drawing.Size(54, 17);
+            this.rb_empty_ban.TabIndex = 9;
+            this.rb_empty_ban.TabStop = true;
+            this.rb_empty_ban.Text = "Empty";
+            this.rb_empty_ban.UseVisualStyleBackColor = true;
+            // 
+            // rb_active_ban
+            // 
+            this.rb_active_ban.AutoSize = true;
+            this.rb_active_ban.Location = new System.Drawing.Point(80, 229);
+            this.rb_active_ban.Name = "rb_active_ban";
+            this.rb_active_ban.Size = new System.Drawing.Size(55, 17);
+            this.rb_active_ban.TabIndex = 8;
+            this.rb_active_ban.TabStop = true;
+            this.rb_active_ban.Text = "Active";
+            this.rb_active_ban.UseVisualStyleBackColor = true;
+            // 
+            // txt_chatlieuban
+            // 
+            this.txt_chatlieuban.Location = new System.Drawing.Point(80, 136);
+            this.txt_chatlieuban.Name = "txt_chatlieuban";
+            this.txt_chatlieuban.Size = new System.Drawing.Size(189, 20);
+            this.txt_chatlieuban.TabIndex = 7;
+            // 
+            // txt_id_banan
+            // 
+            this.txt_id_banan.Location = new System.Drawing.Point(80, 61);
+            this.txt_id_banan.Name = "txt_id_banan";
+            this.txt_id_banan.Size = new System.Drawing.Size(189, 20);
+            this.txt_id_banan.TabIndex = 6;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(77, 277);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(112, 13);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "Số lượng khách tối đa";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(77, 186);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 13);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Tình trạng bàn ";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(77, 105);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(72, 13);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Chất liệu bàn ";
+            // 
+            // lb_idban
+            // 
+            this.lb_idban.AutoSize = true;
+            this.lb_idban.Location = new System.Drawing.Point(77, 29);
+            this.lb_idban.Name = "lb_idban";
+            this.lb_idban.Size = new System.Drawing.Size(67, 13);
+            this.lb_idban.TabIndex = 1;
+            this.lb_idban.Text = "Số hiệu bàn ";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.data_banan);
+            this.groupBox3.Location = new System.Drawing.Point(3, 31);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(443, 408);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            // 
+            // data_banan
+            // 
+            this.data_banan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.data_banan.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.data_banan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_banan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.data_banan.Location = new System.Drawing.Point(3, 16);
+            this.data_banan.Name = "data_banan";
+            this.data_banan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.data_banan.Size = new System.Drawing.Size(437, 389);
+            this.data_banan.TabIndex = 0;
+            this.data_banan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.data_banan_CellClick);
+            // 
+            // toolStrip2
+            // 
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator11,
+            this.toooltrp_reset_ban,
+            this.toolStripSeparator10,
+            this.tooltrp_insert_ban,
+            this.toolStripSeparator8,
+            this.tooltrp_update_ban,
+            this.toolStripSeparator9,
+            this.tooltrp_delete_ban,
+            this.toolStripSeparator7,
+            this.toolStripProgressBar1,
+            this.tool_cb_filter_ban,
+            this.tooltrp_search_banan});
+            this.toolStrip2.Location = new System.Drawing.Point(3, 3);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(749, 28);
+            this.toolStrip2.TabIndex = 0;
+            this.toolStrip2.Text = "toolStrip2";
+            // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 28);
+            // 
+            // toooltrp_reset_ban
+            // 
+            this.toooltrp_reset_ban.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toooltrp_reset_ban.Image = ((System.Drawing.Image)(resources.GetObject("toooltrp_reset_ban.Image")));
+            this.toooltrp_reset_ban.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toooltrp_reset_ban.Name = "toooltrp_reset_ban";
+            this.toooltrp_reset_ban.Size = new System.Drawing.Size(71, 25);
+            this.toooltrp_reset_ban.Text = "Reset";
+            this.toooltrp_reset_ban.Click += new System.EventHandler(this.toooltrp_reset_ban_Click);
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 28);
+            // 
+            // tooltrp_insert_ban
+            // 
+            this.tooltrp_insert_ban.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tooltrp_insert_ban.Image = ((System.Drawing.Image)(resources.GetObject("tooltrp_insert_ban.Image")));
+            this.tooltrp_insert_ban.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tooltrp_insert_ban.Name = "tooltrp_insert_ban";
+            this.tooltrp_insert_ban.Size = new System.Drawing.Size(73, 25);
+            this.tooltrp_insert_ban.Text = "Insert";
+            this.tooltrp_insert_ban.Click += new System.EventHandler(this.tooltrp_insert_ban_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 28);
+            // 
+            // tooltrp_update_ban
+            // 
+            this.tooltrp_update_ban.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tooltrp_update_ban.Image = ((System.Drawing.Image)(resources.GetObject("tooltrp_update_ban.Image")));
+            this.tooltrp_update_ban.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tooltrp_update_ban.Name = "tooltrp_update_ban";
+            this.tooltrp_update_ban.Size = new System.Drawing.Size(86, 25);
+            this.tooltrp_update_ban.Text = "Update";
+            this.tooltrp_update_ban.Click += new System.EventHandler(this.tooltrp_update_ban_Click);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 28);
+            // 
+            // tooltrp_delete_ban
+            // 
+            this.tooltrp_delete_ban.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tooltrp_delete_ban.Image = ((System.Drawing.Image)(resources.GetObject("tooltrp_delete_ban.Image")));
+            this.tooltrp_delete_ban.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tooltrp_delete_ban.Name = "tooltrp_delete_ban";
+            this.tooltrp_delete_ban.Size = new System.Drawing.Size(80, 25);
+            this.tooltrp_delete_ban.Text = "Delete";
+            this.tooltrp_delete_ban.Click += new System.EventHandler(this.tooltrp_delete_ban_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 28);
+            // 
+            // toolStripProgressBar1
+            // 
+            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
+            this.toolStripProgressBar1.Size = new System.Drawing.Size(100, 25);
+            // 
+            // tool_cb_filter_ban
+            // 
+            this.tool_cb_filter_ban.Items.AddRange(new object[] {
+            "Bàn Trống",
+            "Bàn Đang Sử Dụng"});
+            this.tool_cb_filter_ban.Name = "tool_cb_filter_ban";
+            this.tool_cb_filter_ban.Size = new System.Drawing.Size(171, 28);
+            // 
+            // tooltrp_search_banan
+            // 
+            this.tooltrp_search_banan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tooltrp_search_banan.Image = ((System.Drawing.Image)(resources.GetObject("tooltrp_search_banan.Image")));
+            this.tooltrp_search_banan.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tooltrp_search_banan.Name = "tooltrp_search_banan";
+            this.tooltrp_search_banan.Size = new System.Drawing.Size(81, 25);
+            this.tooltrp_search_banan.Text = "Search";
+            this.tooltrp_search_banan.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // toolStrip3
+            // 
+            this.toolStrip3.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip3.Name = "toolStrip3";
+            this.toolStrip3.Size = new System.Drawing.Size(100, 25);
+            this.toolStrip3.TabIndex = 0;
+            // 
+            // quanlinhahangDataSet1
+            // 
+            this.quanlinhahangDataSet1.DataSetName = "quanlinhahangDataSet";
+            this.quanlinhahangDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // loaibananBindingSource
+            // 
+            this.loaibananBindingSource.DataMember = "Loaibanan";
+            this.loaibananBindingSource.DataSource = this.quanlinhahangDataSet1;
+            // 
+            // loaibananTableAdapter1
+            // 
+            this.loaibananTableAdapter1.ClearBeforeFill = true;
             // 
             // Form1
             // 
@@ -481,6 +813,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.datagrip_nhanvien)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.tab_banan.ResumeLayout(false);
+            this.tab_banan.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.data_banan)).EndInit();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.quanlinhahangDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loaibananBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -489,7 +831,7 @@
 
         private System.Windows.Forms.TabControl tabs_quanlynhahang;
         private System.Windows.Forms.TabPage tab_nhanvien;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tab_banan;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -527,6 +869,40 @@
         private System.Windows.Forms.ToolStripButton tooltrp_search_nhanvien;
         private System.Windows.Forms.DateTimePicker datetm_ngaysinh_nhanvien;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label lb_idban;
+        private System.Windows.Forms.DataGridView data_banan;
+        private System.Windows.Forms.Button btn_chucnang_ban;
+        private System.Windows.Forms.RadioButton rb_empty_ban;
+        private System.Windows.Forms.RadioButton rb_active_ban;
+        private System.Windows.Forms.TextBox txt_chatlieuban;
+        private System.Windows.Forms.TextBox txt_id_banan;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton toooltrp_reset_ban;
+        private System.Windows.Forms.ToolStrip toolStrip3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripButton tooltrp_insert_ban;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripButton tooltrp_update_ban;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripButton tooltrp_delete_ban;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
+        private System.Windows.Forms.ToolStripComboBox tool_cb_filter_ban;
+        private System.Windows.Forms.ToolStripButton tooltrp_search_banan;
+        private quanlinhahangDataSet quanlinhahangDataSet;
+        private quanlinhahangDataSetTableAdapters.LoaibananTableAdapter loaibananTableAdapter;
+        private System.Windows.Forms.Button btn_huy_banan;
+        private System.Windows.Forms.Button btn_huy_nhanvien;
+        private System.Windows.Forms.ComboBox cb_sokhach_ban;
+        private quanlinhahangDataSet quanlinhahangDataSet1;
+        private System.Windows.Forms.BindingSource loaibananBindingSource;
+        private quanlinhahangDataSetTableAdapters.LoaibananTableAdapter loaibananTableAdapter1;
     }
 }
 
