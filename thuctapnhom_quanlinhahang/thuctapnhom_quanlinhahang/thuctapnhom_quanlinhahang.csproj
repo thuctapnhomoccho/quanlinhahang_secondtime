@@ -55,6 +55,7 @@
     <Compile Include="Object\Account.cs" />
     <Compile Include="Object\banan.cs" />
     <Compile Include="Object\connects.cs" />
+    <Compile Include="Object\hoadon.cs" />
     <Compile Include="Object\khachhang.cs" />
     <Compile Include="Object\nhanvien.cs" />
     <Compile Include="Program.cs" />
