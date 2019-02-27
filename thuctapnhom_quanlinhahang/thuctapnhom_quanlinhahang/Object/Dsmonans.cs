@@ -6,37 +6,40 @@ using System.Threading.Tasks;
 using System.Data.Sql;
 using System.Data.SqlClient;
 using System.Data;
-
 namespace thuctapnhom_quanlinhahang.Object
 {
-    class hoadon
+    class Dsmonans
     {
-        public int id_hoadon=0;
-        public int id_nhanvien;
-        public int id_khachhang;
-        public int id_banan;
-        public bool tinhtrang;
-        public int id_khuyenmai;
-        public DateTime ngaylap;
-        public DateTime giolap;
-
-
+        public int id_hoadon;
+        public int id_monan;
+        public int soluong;
         connects cn = new connects();
-        public DataTable showhoadon()
+        public DataTable show_dsmonan(int id)
         {
-            DataTable kp = null;
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = cn.cnt;
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.CommandText = @"show_hoadon";
-            SqlDataAdapter adt = new SqlDataAdapter();
-            adt.SelectCommand = cmd;
-            kp = new DataTable();
-            adt.Fill(kp);
+            DataTable dttb = new DataTable();
+            if (cn.isConnect())
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = cn.cnt;
+                    cmd.CommandText = @"show_dsmonan";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_hoadon", id);
+                    SqlDataAdapter adt = new SqlDataAdapter(cmd);
+                    adt.Fill(dttb);
+                }
+                catch (Exception)
+                {
 
-            return kp;
+
+                }
+
+
+            }
+            return dttb;
         }
-        public bool insert_hoadon(hoadon hd)
+        public bool insert_monan( Dsmonans ma)
         {
             bool kp = false;
             if (cn.isConnect())
@@ -45,15 +48,11 @@ namespace thuctapnhom_quanlinhahang.Object
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn.cnt;
-                    cmd.CommandText = @"insert_hoadon";
+                    cmd.CommandText = @"insert_chitietmonan";
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@id_nhanvien", hd.id_nhanvien);
-                    cmd.Parameters.AddWithValue("@id_banan", hd.id_banan);
-                    cmd.Parameters.AddWithValue("@id_khachhang", hd.id_khachhang);
-                    cmd.Parameters.AddWithValue("@id_khuyenmai", hd.id_khuyenmai);
-                    cmd.Parameters.AddWithValue("@tinhtrang", hd.tinhtrang);
-                    cmd.Parameters.AddWithValue("@ngaylap", hd.ngaylap);
-                    cmd.Parameters.AddWithValue("@gio", hd.giolap);
+                    cmd.Parameters.AddWithValue("@id_hoadon",ma.id_hoadon );
+                    cmd.Parameters.AddWithValue("@id_monan", ma.id_monan);
+                    cmd.Parameters.AddWithValue("@soluong", ma.soluong);
                     int i = cmd.ExecuteNonQuery();
                     if (i > 0) kp = true;
                 }
@@ -66,7 +65,7 @@ namespace thuctapnhom_quanlinhahang.Object
             }
             return kp;
         }
-        public bool update_hoadon(hoadon hd)
+        public bool update_dsmonan(Dsmonans ma)
         {
             bool kp = false;
             if (cn.isConnect())
@@ -75,17 +74,42 @@ namespace thuctapnhom_quanlinhahang.Object
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn.cnt;
-                    cmd.CommandText = @"update_hoadon";
+                    cmd.CommandText = @"update_chitietmonan";
                     cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_hoadon", ma.id_hoadon);
+                    cmd.Parameters.AddWithValue("@id_monan", ma.id_monan);
+                    cmd.Parameters.AddWithValue("@soluong", ma.soluong);
+                    int i = cmd.ExecuteNonQuery();
+                    if (i > 0) kp = true;
+                  
+                }
+                catch (Exception)
+                {
 
-                    cmd.Parameters.AddWithValue("@id_hoadon", hd.id_hoadon);
-                    cmd.Parameters.AddWithValue("@id_nhanvien", hd.id_nhanvien);
-                    cmd.Parameters.AddWithValue("@id_banan", hd.id_banan);
-                    cmd.Parameters.AddWithValue("@id_khachhang", hd.id_khachhang);
-                    cmd.Parameters.AddWithValue("@id_khuyenmai", hd.id_khuyenmai);
-                    cmd.Parameters.AddWithValue("@tinhtrang", hd.tinhtrang);
-                    cmd.Parameters.AddWithValue("@ngaylap", hd.ngaylap);
-                    cmd.Parameters.AddWithValue("@gio", hd.giolap);
+
+                }
+                finally
+                {
+                    cn.cnt.Close();
+                }
+
+            }
+            return kp;
+        }
+        public bool delete_monan(int id_hoadon,int id_monan)
+        {
+            bool kp = false;
+            if (cn.isConnect())
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = cn.cnt;
+                    cmd.CommandText = @"delete_monan";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_hoadon", id_hoadon);
+                    cmd.Parameters.AddWithValue("@id_monan", id_monan);
+
                     int i = cmd.ExecuteNonQuery();
                     if (i > 0) kp = true;
                 }
@@ -98,43 +122,47 @@ namespace thuctapnhom_quanlinhahang.Object
             }
             return kp;
         }
-        public bool delete_hoadon(int a)
+        public DataTable search_monan_theo_idloaimonan(int a)
         {
-            bool kp = false;
+            DataTable kp = new DataTable();
             if (cn.isConnect())
             {
                 try
                 {
                     SqlCommand cmd = new SqlCommand();
                     cmd.Connection = cn.cnt;
-                    cmd.CommandText = @"delete_hoadon";
+                    cmd.CommandText = @"search_monan_theo_idloaimonan";
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id_loaimonan", a);
+                    SqlDataAdapter adt = new SqlDataAdapter(cmd);
+                    adt.Fill(kp);
+
+                    cn.cnt.Close();
+
+                }
+                catch (Exception)
+                {
+
+
+                }
+
+            }
+
+
+            return kp;
+        }
+        public DataTable tinhtien (int a)
+        {
+            DataTable kp = new DataTable();
+            if (cn.isConnect())
+            {
+                try
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = cn.cnt;
+                    cmd.CommandText = @"tinhtien";
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@id_hoadon", a);
-
-                    int i = cmd.ExecuteNonQuery();
-                    if (i > 0) kp = true;
-                }
-                catch (Exception)
-                {
-
-
-                }
-
-            }
-            return kp;
-        }
-        public DataTable search_hoadon(string a)
-        {
-            DataTable kp = new DataTable();
-            if (cn.isConnect())
-            {
-                try
-                {
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = cn.cnt;
-                    cmd.CommandText = @"search_hoadon";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ten", a);
                     SqlDataAdapter adt = new SqlDataAdapter(cmd);
                     adt.Fill(kp);
 
@@ -152,31 +180,7 @@ namespace thuctapnhom_quanlinhahang.Object
 
             return kp;
         }
-        public DataTable search_khuyenmai(int id)
-        {
-            DataTable kp = new DataTable();
-            if (cn.isConnect())
-            {
-                try
-                {
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.Connection = cn.cnt;
-                    cmd.CommandText = @"search_khuyenmai";
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@id", id);
-                    SqlDataAdapter adt = new SqlDataAdapter(cmd);
-                    adt.Fill(kp);
 
-                    cn.cnt.Close();
-
-                }
-                catch (Exception)
-                {
-
-
-                }
-            }
-            return kp;
-        }
     }
 }
+

@@ -46,17 +46,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DSmonan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSmonan.Designer.cs">
+      <DependentUpon>DSmonan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Object\Account.cs" />
     <Compile Include="Object\banan.cs" />
     <Compile Include="Object\connects.cs" />
+    <Compile Include="Object\Dsmonans.cs" />
     <Compile Include="Object\hoadon.cs" />
     <Compile Include="Object\khachhang.cs" />
+    <Compile Include="Object\Logins.cs" />
     <Compile Include="Object\nhanvien.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,8 +79,44 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>quanlinhahangDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="quanlinhahangDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quanlinhahangDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="quanlinhahangDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quanlinhahangDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="quanlinhahangDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quanlinhahangDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="quanlinhahangDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quanlinhahangDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="quanlinhahangDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quanlinhahangDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="quanlinhahangDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>quanlinhahangDataSet6.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DSmonan.resx">
+      <DependentUpon>DSmonan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,6 +146,72 @@
     </None>
     <None Include="quanlinhahangDataSet.xss">
       <DependentUpon>quanlinhahangDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="quanlinhahangDataSet1.xsc">
+      <DependentUpon>quanlinhahangDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="quanlinhahangDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quanlinhahangDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quanlinhahangDataSet1.xss">
+      <DependentUpon>quanlinhahangDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="quanlinhahangDataSet2.xsc">
+      <DependentUpon>quanlinhahangDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="quanlinhahangDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quanlinhahangDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quanlinhahangDataSet2.xss">
+      <DependentUpon>quanlinhahangDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="quanlinhahangDataSet3.xsc">
+      <DependentUpon>quanlinhahangDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="quanlinhahangDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quanlinhahangDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quanlinhahangDataSet3.xss">
+      <DependentUpon>quanlinhahangDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="quanlinhahangDataSet4.xsc">
+      <DependentUpon>quanlinhahangDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="quanlinhahangDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quanlinhahangDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quanlinhahangDataSet4.xss">
+      <DependentUpon>quanlinhahangDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="quanlinhahangDataSet5.xsc">
+      <DependentUpon>quanlinhahangDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="quanlinhahangDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quanlinhahangDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quanlinhahangDataSet5.xss">
+      <DependentUpon>quanlinhahangDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="quanlinhahangDataSet6.xsc">
+      <DependentUpon>quanlinhahangDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="quanlinhahangDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>quanlinhahangDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="quanlinhahangDataSet6.xss">
+      <DependentUpon>quanlinhahangDataSet6.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

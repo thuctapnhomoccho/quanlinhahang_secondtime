@@ -12,7 +12,7 @@ namespace thuctapnhom_quanlinhahang.Object
     class connects
     {
         public SqlConnection cnt;
-        string text_connect = @"Data Source=TRUONG-PC\SQLEXPRESS;Initial Catalog=quanlinhahang;Integrated Security=True";
+        string text_connect = @"Data Source=DESKTOP-AMTNAOM\SQLEXPRESS;Initial Catalog=quanlinhahang;Integrated Security=True";
         public connects()
         {
             cnt = new SqlConnection(text_connect);

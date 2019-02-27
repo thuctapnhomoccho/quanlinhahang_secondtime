@@ -20,12 +20,21 @@ namespace thuctapnhom_quanlinhahang.Object
             DataTable dttb = new DataTable();
             if (cn.isConnect())
             {
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = cn.cnt;
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = @"select * from Account";
-                SqlDataAdapter adt = new SqlDataAdapter(cmd);
-                adt.Fill(dttb);
+                try
+                {
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = cn.cnt;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = @"select * from Account";
+                    SqlDataAdapter adt = new SqlDataAdapter(cmd);
+                    adt.Fill(dttb);
+                }
+                catch (Exception)
+                {
+
+                  
+                }
+              
             }
             return dttb;
         }
